@@ -28,12 +28,9 @@ public class App extends Application {
         grid.setVgap(20);
         grid.setHgap(20);
 
+        // Title label
         Label titleLabel = new Label("Sheet");
-        
         Utils.SetFontStyle(titleLabel, STYLESHEET_MODENA, Utils.GetFontWeight(Weight.Bold), 24);
-        
-
-
         grid.add(titleLabel, 0, 0, 2, 1);
         AnimationController.FadeInAnimate(titleLabel);
 
@@ -43,18 +40,21 @@ public class App extends Application {
         grid.add(nameField, 1, 1);
         AnimationController.FadeInAnimate(nameLabel);
         AnimationController.FadeInAnimate(nameField);
+
         Label dobLabel = new Label("Date of Birth:");
         DatePicker dobPicker = new DatePicker();
         grid.add(dobLabel, 0, 2);
         grid.add(dobPicker, 1, 2);
         AnimationController.FadeInAnimate(dobLabel);
         AnimationController.FadeInAnimate(dobPicker);
+        
         Label IDLabel = new Label("ID:");
         TextField IDField = new TextField();
         grid.add(IDLabel, 0, 3);
         grid.add(IDField, 1, 3);
         AnimationController.FadeInAnimate(IDLabel);
         AnimationController.FadeInAnimate(IDField);
+        
         Label genderLabel = new Label("Gender");
         ComboBox<String> genderComboBox = new ComboBox<>();
         genderComboBox.getItems().addAll("Male", "Female", "Other");
@@ -63,17 +63,18 @@ public class App extends Application {
         grid.add(genderComboBox, 1, 4);
         AnimationController.FadeInAnimate(genderLabel);
         AnimationController.FadeInAnimate(genderComboBox);
+
         Label provinceLabel = new Label("Province");
         TextField provinceField = new TextField();
         grid.add(provinceLabel, 0, 5);
         grid.add(provinceField, 1, 5);
         AnimationController.FadeInAnimate(provinceLabel);
         AnimationController.FadeInAnimate(provinceField);
+
         Button submitButton = new Button("Submit");
         Utils.SetFontStyle(submitButton, STYLESHEET_MODENA, Utils.GetFontWeight(Weight.Bold), 14);
         Button searchButton = new Button("Search");
         Utils.SetFontStyle(searchButton, STYLESHEET_MODENA, Utils.GetFontWeight(Weight.Bold), 14);
-
         grid.add(submitButton, 1, 6);
 
         HBox buttonBox = new HBox(45);
